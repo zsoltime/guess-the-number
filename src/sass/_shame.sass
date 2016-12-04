@@ -1,0 +1,130 @@
+body
+  background-image: url(../images/diamond_upholstery.png)
+  background-blend-mode: multiply
+  font-size: 5vmin
+  height: 100%
+  text-align: center
+
+  p
+    margin: 1.25rem 0 0
+
+::selection
+  background: color(red, accent)
+  color: #fff
+
+.splash
+  align-items: center
+  display: flex
+  flex-direction: column
+  font-family: $font-stack-sans
+  height: 100%
+  justify-content: space-between
+  padding: 1.25rem
+  text-shadow: .5vw .5vw rgba(black, .3)
+
+.gameover,
+.start-first,
+.start
+  display: flex
+  flex-direction: column
+  flex: 0 1 57.5%
+  height: 100%
+  justify-content: space-between
+
+header
+  width: 100%
+
+h1
+  font-weight: 300
+  letter-spacing: .2rem
+  margin: 0
+  text-transform: uppercase
+
+button
+  background: color(red, accent)
+  border: .5vw solid rgba(black, .2)
+  border-radius: .5rem
+  box-shadow: 0 2px 6px rgba(black,.2)
+  color: #fff
+  cursor: pointer
+  letter-spacing: .2rem
+  padding: 1rem 0
+  text-transform: uppercase
+  transition: background .3s ease
+  width: 75vmin
+
+  &:hover
+    background: color(red, dark)
+
+.game
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  font-family: $font-stack-serif
+  height: 100%
+  justify-content: space-between
+  padding: 1.25rem
+  user-select: none
+
+h2
+  font-family: $font-stack-sans
+  font-size: 10vmin
+  font-weight: 300
+  letter-spacing: .2rem
+  margin: 0
+  text-shadow: .5vw .5vw rgba(black, .3)
+  text-transform: uppercase
+
+.limit,
+input
+  background: none
+  border: 0
+  color: #fff
+  font-size: 15vmin
+  text-align: center
+  text-shadow: .75vw 1vw rgba(black, .3)
+  width: 100%
+
+input
+  color: transparent
+  cursor: pointer
+  outline: none
+  text-shadow: 0 0 0 #fff, .75vw 1vw rgba(black, .3)
+  transition: text-shadow .3s ease
+
+  &.wrong
+    text-shadow: 0 0 0 color(red), .75vw 1vw rgba(black, .3)
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+::placeholder
+  color: #fff
+
+.stats
+  display: flex
+  opacity: 0.5
+  justify-content: space-around
+  text-shadow: .5vw .5vw rgba(black, .3)
+  width: 100%
+
+.blinking
+  animation: blink 1.5s ease-out infinite
+
+.hidden
+  display: none
+
+@keyframes blink
+  50%
+    opacity: 1
+
+  90%
+    opacity: 0
+
+@media (orientation: landscape)
+  .limit,
+  input
+    width: 33.33333%

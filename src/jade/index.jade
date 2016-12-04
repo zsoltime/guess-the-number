@@ -1,0 +1,42 @@
+extends layout
+block title
+  title Day 1 - Guess the Number
+block content
+  .splash
+    .start-first
+      header
+        h1 Guess the Number
+
+      .firsttimer
+        p It seems it's your first time here
+        p I've already picked a number for you
+        p Let's get started
+
+    .start.hidden
+      header
+        h1 Guess the Number
+
+      .scores
+        p Your quickest game: #[span#besttime 00:00]
+        p Your fewest guesses: #[span#bestguesses 0]
+        p Could you guess my next number faster?
+
+    .gameover.hidden
+      header
+        h1 You Did It!
+        p I should have picked a more difficult number
+      .topscores
+        p You found the number #[span#target] in just #[span#score ] guesses
+        p Ready for another game?
+
+    button#start Start Game
+
+  .game.hidden
+    header
+      h2 Make Your Guess
+    #min.limit
+    input#guess.blinking(type='number', autocomplete='off', placeholder='(?)')
+    #max.limit
+    .stats
+      span Guesses: #[span#guesses]
+      span #[span#timer]
