@@ -1,6 +1,6 @@
 # Day 1 of My 3 Weeks Game Challenge
 
-This is the first day of my 3 weeks challenge, bringing you a number guessing game.
+This is the first day of my [3 weeks challenge](https://github.com/zsoltime/game-challenge), bringing you a number guessing game.
 
 In this HTML5 game you should guess a randomly selected integer in the shortest possible time with the fewest number of guesses.
 
